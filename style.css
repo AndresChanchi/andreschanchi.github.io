@@ -1,0 +1,97 @@
+:root
+{
+  --background-sections: rgb(50, 46, 46 ); 
+  --background-body: rgb(240, 233, 232);
+}
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html
+{
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+  background: var(--background-body);
+  width: 100vw;
+  height: auto;
+}
+.page-container
+{
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "aside  main "
+  "footer footer"
+  ;
+  width: auto;
+  height: 100%;
+  gap: 10px;
+}
+
+.page-section
+{
+  display: flex;
+  font-size: 6rem; 
+  overflow: auto;
+  background-color: var(--background-sections); 
+  margin: 0.5rem;
+}
+
+.page-section-header
+{
+  grid-area: header;
+}
+
+.page-section-aside
+{
+  grid-area: aside;
+}
+.page-section-main
+{
+  display: grid;
+  grid-template: repeat(3 / 1fr) / 1fr;
+  grid-area: main;
+}
+.page-section-main
+{
+  display: grid;
+   
+}
+.page-section-footer
+{
+  grid-area: footer;
+}
+.tabs-container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style-type: none;  
+}
+nav 
+{
+  height: auto;
+  width: 100%;
+}
+.tab a
+{
+  text-decoration: none;
+  background-color: darkred;
+  color: white;
+}
+.tab a:hover
+{
+  color: gold;
+}
+.tab a:active
+{
+  color: yellow;
+}
