@@ -26,13 +26,13 @@ body
 {
   display: grid;
   grid-template-areas:
-  "header header"
-  "aside  main "
-  "footer footer"
+  "header"
+  "aside" 
+  "main"
+  "footer"
   ;
   width: auto;
   height: 100%;
-  gap: 10px;
 }
 
 .page-section
