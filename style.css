@@ -19,7 +19,6 @@ html
 body
 {
   background: var(--background-body);
-  width: 100vw;
   height: auto;
 }
 .page-container
@@ -38,34 +37,47 @@ body
 .page-section
 {
   display: flex;
-  font-size: 6rem; 
-  overflow: auto;
+  font-size: 1.6rem;
   background-color: var(--background-sections); 
-  margin: 0.5rem;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .page-section-header
 {
   grid-area: header;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .page-section-aside
 {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  width: 100%;
   grid-area: aside;
 }
 .page-section-main
 {
-  display: grid;
-  grid-template: repeat(3 / 1fr) / 1fr;
+
+  display: flex;
   grid-area: main;
-}
-.page-section-main
-{
-  display: grid;
-   
+  height: 100vh; 
+  background: #323232; 
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;   
+  justify-content: space-around;
 }
 .page-section-footer
 {
+  color: white;
   grid-area: footer;
 }
 .tabs-container
@@ -75,6 +87,8 @@ body
   justify-content: space-around;
   text-decoration: none;
   list-style-type: none;  
+  background: darkred;
+  align-self: center;
 }
 nav 
 {
