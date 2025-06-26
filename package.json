@@ -1,0 +1,40 @@
+{
+  "name": "portfolio",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run next dev",
+    "build": "bun run next build",
+    "export": "bun run next export",
+    "start": "bun run next start",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.5",
+    "@playwright/test": "^1.53.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/bun": "latest",
+    "@types/node": "^24.0.4",
+    "@types/react": "^19.1.8",
+    "jest": "^30.0.3",
+    "next-rspack": "^15.3.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "next": "^15.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "trustedDependencies": [
+    "unrs-resolver"
+  ]
+}
