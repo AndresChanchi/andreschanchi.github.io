@@ -1,4 +1,6 @@
-// src/app/layout.tsx
+import { portfolioMetadata } from "@/seo/portfolioMetadata";
+export const metadata = portfolioMetadata;
+
 export default function RootLayout({
   children,
 }: {
