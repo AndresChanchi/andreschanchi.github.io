@@ -6,7 +6,7 @@
       "@app/*": ["app/*"],
       "@lib/*": ["lib/*"],
       "@hooks/*": ["lib/hooks/*"],
-      "@types/*": ["types/*"],
+      "@types/*": ["src/types/*"],
       "@components/*": ["ui/components/*"],
       "@feedback/*": ["ui/feedback/*"],
       "@sections/*": ["ui/sections/*"],
@@ -15,6 +15,9 @@
       "@themes/*": ["styles/themes/*"],
       "@testing/*": ["testing/*"],
       "@mocks/*": ["testing/mocks/*"],
+      "@data/*": ["data/*"],
+      "@contexts/*": ["contexts/*"],
+      "@locales/*": ["locales/*"],
       "@test-utils/*": ["testing/test-utils/*"]
     },
     "lib": ["ESNext", "dom"],
@@ -26,7 +29,8 @@
     // Bundler mode
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
+    "isolatedModules": true,
     "noEmit": true,
     // Best practices
     "strict": true,

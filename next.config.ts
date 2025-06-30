@@ -16,5 +16,7 @@ const nextConfig: NextConfig = {
 
   // Desactiva el runtime de servidores (no usamos SSR)
 };
-
+module.exports = {
+  allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev"],
+};
 export default withRspack(nextConfig);
