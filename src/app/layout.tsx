@@ -1,5 +1,8 @@
 import { head } from "./head.ts";
-import { ThemeInitializer } from "@components/theme/ThemeInitializer.tsx";
+import { Header } from "@components/header/Header";
+import { ThemeProvider } from "@contexts/theme-context";
+import { LocaleProvider } from "@contexts/locale-context";
+
 export const metadata = head;
 
 export default function RootLayout({
@@ -11,10 +14,15 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <link rel="stylesheet" href="/output.css" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <ThemeInitializer />
-        {children}
+        <ThemeProvider>
+          <LocaleProvider>
+            <Header />
+            {children}
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
