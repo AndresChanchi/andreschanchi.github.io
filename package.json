@@ -12,7 +12,8 @@
     "lint": "biome lint .",
     "check": "biome check .",
     "check:fix": "biome check --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:styles": "bunx @tailwindcss/cli -i ./src/styles/globals.css -o ./public/output.css --watch"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.5",

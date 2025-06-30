@@ -1,11 +1,23 @@
 {
   "compilerOptions": {
     // Environment setup & latest features
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"]
+      "@app/*": ["app/*"],
+      "@lib/*": ["lib/*"],
+      "@hooks/*": ["lib/hooks/*"],
+      "@types/*": ["types/*"],
+      "@components/*": ["ui/components/*"],
+      "@feedback/*": ["ui/feedback/*"],
+      "@sections/*": ["ui/sections/*"],
+      "@layouts/*": ["ui/layouts/*"],
+      "@styles/*": ["styles/*"],
+      "@themes/*": ["styles/themes/*"],
+      "@testing/*": ["testing/*"],
+      "@mocks/*": ["testing/mocks/*"],
+      "@test-utils/*": ["testing/test-utils/*"]
     },
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "dom"],
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
