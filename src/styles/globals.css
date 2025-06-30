@@ -95,6 +95,28 @@
     max-width: 1280px;
   }
 }
+//mobile
+@media (max-width: 767px) {
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .mobile-menu.open {
+    max-height: 300px;
+    transition: max-height 0.3s ease-in;
+  }
+}
+
+// caso excepcional
+@media (max-width: 350px) {
+  .copy-button-responsive {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
 
 /* 📝 Tipografía semántica */
 @utility text-heading {
