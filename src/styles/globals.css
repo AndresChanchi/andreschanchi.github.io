@@ -1,1 +1,135 @@
 @import "tailwindcss";
+
+/* ───────────────────────────────
+   🌐 1. Design Tokens
+   ─────────────────────────────── */
+@theme {
+  --color-primary: #ff3e5f;
+  --color-secondary: #00d4d8;
+  --color-accent: #7c4dff;
+
+  --color-background: #ffffff;
+  --color-surface: #f1f5f9;
+
+  --color-on-primary: #ffffff;
+  --color-on-background: #1e293b;
+  --color-on-surface: #334155;
+}
+
+/* 🌙 Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-on-background: #e2e8f0;
+    --color-on-surface: #cbd5e1;
+  }
+}
+
+/* ───────────────────────────────
+   🛠 2. Utilidades personalizadas
+   ─────────────────────────────── */
+/* 🎨 Backgrounds */
+@utility bg-background {
+  background-color: var(--color-background);
+}
+@utility bg-surface {
+  background-color: var(--color-surface);
+}
+@utility bg-primary {
+  background-color: var(--color-primary);
+}
+@utility bg-secondary {
+  background-color: var(--color-secondary);
+}
+@utility bg-accent {
+  background-color: var(--color-accent);
+}
+
+/* 🎨 Textos */
+@utility text-on-background {
+  color: var(--color-on-background);
+}
+@utility text-on-surface {
+  color: var(--color-on-surface);
+}
+@utility text-primary {
+  color: var(--color-primary);
+}
+@utility text-secondary {
+  color: var(--color-secondary);
+}
+@utility text-accent {
+  color: var(--color-accent);
+}
+
+/* 🧱 Bordes */
+@utility border-primary {
+  border-color: var(--color-primary);
+}
+@utility border-secondary {
+  border-color: var(--color-secondary);
+}
+
+/* 📐 Layout */
+@utility container-responsive {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: 768px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+/* 📝 Tipografía semántica */
+@utility text-heading {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-on-surface);
+  font-size: 1.875rem; /* text-3xl */
+
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  } /* text-4xl */
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  } /* text-5xl */
+}
+
+@utility text-subheading {
+  font-weight: 500;
+  color: var(--color-on-surface);
+  font-size: 1.125rem; /* text-lg */
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  } /* text-xl */
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  } /* text-2xl */
+}
+
+/* ───────────────────────────────
+   🧍 3. Base styles
+   ─────────────────────────────── */
+body {
+  @apply bg-background text-on-background;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
