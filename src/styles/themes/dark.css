@@ -1,0 +1,6 @@
+:root[data-theme="dark"] {
+  --background: #0f172a; /* 🔵 Fondo oscuro profundo */
+  --surface: #1e293b; /* 🔵 Superficie oscura */
+  --on-background: #e2e8f0; /* ⚪ Texto claro */
+  --on-surface: #cbd5e1; /* ⚪ Texto más tenue */
+}

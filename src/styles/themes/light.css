@@ -1,0 +1,6 @@
+:root[data-theme="light"] {
+  --background: #ffffff; /* ⚪ Fondo blanco puro */
+  --surface: #f1f5f9; /* ⚪ Azul pálido */
+  --on-background: #1e293b; /* 🔵 Texto oscuro */
+  --on-surface: #334155; /* 🔵 Texto intermedio */
+}
