@@ -1,9 +1,9 @@
-// src/app/page.tsx
+import HeroSection from "@sections/hero-section/HeroSection";
+
 export default function HomePage() {
   return (
     <main>
-      <h1>Portafolio Web3</h1>
-      <p>Próximamente...</p>
+      <HeroSection />
     </main>
   );
 }

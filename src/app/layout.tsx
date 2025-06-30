@@ -1,5 +1,6 @@
-import { portfolioMetadata } from "@/seo/portfolioMetadata";
-export const metadata = portfolioMetadata;
+import { head } from "./head.ts";
+import { ThemeInitializer } from "@components/theme/ThemeInitializer.tsx";
+export const metadata = head;
 
 export default function RootLayout({
   children,
@@ -8,7 +9,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <head>
+        <link rel="stylesheet" href="/output.css" />
+      </head>
+      <body>
+        <ThemeInitializer />
+        {children}
+      </body>
     </html>
   );
 }
