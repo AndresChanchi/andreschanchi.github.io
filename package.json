@@ -13,7 +13,9 @@
     "check": "biome check .",
     "check:fix": "biome check --write .",
     "typecheck": "tsc --noEmit",
-    "build:styles": "bunx @tailwindcss/cli -i ./src/styles/globals.css -o ./public/output.css --watch"
+    "build:styles": "bunx @tailwindcss/cli -i ./src/styles/globals.css -o ./public/output.css --watch",
+    "deploy": "node scripts/deploy.js",
+    "arns": "node scripts/arns.js"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.5",
@@ -32,10 +34,14 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@ar.io/sdk": "^3.14.0",
+    "@ardrive/turbo-sdk": "^1.28.2",
+    "mime-types": "^3.0.1",
     "next": "^15.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "yargs": "^18.0.0"
   },
   "trustedDependencies": [
     "@parcel/watcher",

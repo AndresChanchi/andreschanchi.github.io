@@ -1,22 +1,19 @@
 import withRspack from "next-rspack";
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  output: "export", // Generar HTML estático para Arweave
+const nextConfig: NextConfig = withRspack({
+  output: "export", // Genera HTML estático para Arweave
 
-  // Permitir uso de rutas absolutas desde src/
-
-  // Configurar imágenes si llegas a usar <Image />
   images: {
-    unoptimized: true, // Desactiva el loader, necesario para exportación estática
+    unoptimized: true, // Necesario para exportación sin SSR
   },
 
-  // SEO-friendly: esto permite precacheo y navegación estática
-  trailingSlash: true, // Mejora compatibilidad en sitios 100% exportados
+  trailingSlash: true, // Para que todas las rutas terminen en /
+  
+  // Puedes agregar aquí cualquier otra opción, incluyendo rewrites si los necesitas
+  experimental: {
+    // Si usas features experimentales como View Transitions o Server Actions
+  },
+});
 
-  // Desactiva el runtime de servidores (no usamos SSR)
-};
-module.exports = {
-  allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev"],
-};
-export default withRspack(nextConfig);
+export default nextConfig;
